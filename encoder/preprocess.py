@@ -71,7 +71,6 @@ def _preprocess_speaker_dirs(speaker_dirs, dataset_name, datasets_root, out_dir,
         speaker_out_dir = out_dir.joinpath(speaker_name)
         speaker_out_dir.mkdir(exist_ok=True)
         sources_fpath = speaker_out_dir.joinpath("_sources.txt")
-        print(sources_fpath)
         
         # There's a possibility that the preprocessing was interrupted earlier, check if 
         # there already is a sources file.
