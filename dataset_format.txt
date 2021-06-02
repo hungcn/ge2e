@@ -1,0 +1,12 @@
+in datasets_root:
+-vivos
+--train
+---waves
+----speaker
+-----file.ext (ext in [wav, mp3, flac])
+
+after run encoder_preprocess:
+in out_dir:
+-vivos_train_mels_speaker
+--file.npy
+--_sources.txt

@@ -16,5 +16,3 @@
 *.wav
 *.sh
 encoder/saved_models/*
-synthesizer/saved_models/*
-vocoder/saved_models/*
