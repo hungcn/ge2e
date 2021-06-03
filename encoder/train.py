@@ -99,15 +99,6 @@ def train(run_id: str, clean_data_root: Path, models_dir: Path, umap_every: int,
             embeds = embeds.detach().cpu().numpy()
             vis.draw_projections(embeds, utterances_per_speaker, step, projection_fpath)
             vis.save()
-
-        # Overwrite the latest version of the model
-        if save_every != 0 and step % save_every == 0:
-            print("Saving the model (step %d)" % step)
-            torch.save({
-                "step": step + 1,
-                "model_state": model.state_dict(),
-                "optimizer_state": optimizer.state_dict(),
-            }, state_fpath)
             
         # Make a backup
         if backup_every != 0 and step % backup_every == 0:
